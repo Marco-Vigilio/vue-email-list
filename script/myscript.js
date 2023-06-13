@@ -37,7 +37,6 @@ createApp ({
         },
     },
     created(){
-        this.newEmail();
         this.fillArrayEmail();
     },
 

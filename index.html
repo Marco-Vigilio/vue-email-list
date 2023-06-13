@@ -12,10 +12,10 @@
 
     <main id="app">
         <h1>Vue Email List</h1>
-        <div>
+        <div v-if="emailList.length === 10">
             <ul>
-                <li v-for="(email, index) in emailList">
-                    {{index}}  {{email}}
+                <li v-for="email in emailList">
+                    {{email}}
                 </li>
             </ul>
         </div>
