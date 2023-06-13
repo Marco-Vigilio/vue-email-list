@@ -18,14 +18,15 @@ createApp ({
     data(){
         return {
             emailList: [],
+            emeil: "",
         }
     },
     methods:{
         newEmail(){
             axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
             .then( risposta =>{
-                let email = risposta.data.response;
-                this.emailList.push(email);
+                this.email = risposta.data.response;
+                this.emailList.push(this.email);
             });
         },
         
@@ -34,6 +35,10 @@ createApp ({
                 this.newEmail();
             }
             return this.emailList;
+        },
+
+        clickEmail(elementEmail){
+            alert("Hai cliccato la email: " + elementEmail);
         },
     },
     created(){
