@@ -40,6 +40,10 @@ createApp ({
         clickEmail(elementEmail){
             alert("Hai cliccato la email: " + elementEmail);
         },
+
+        addEmail(){
+            this.newEmail();
+        },
     },
     created(){
         this.fillArrayEmail();
